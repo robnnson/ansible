@@ -11,7 +11,6 @@
         api_password: "your_proxmox_password"
         node: "pve1"
         name: "lightweight-vm"
-        template: "debian-10.0-standard_10.0-1_amd64"  # Specify the template name or ID
         memory: 512
         onboot: true
         cores: 1
