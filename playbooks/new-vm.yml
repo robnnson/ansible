@@ -1,11 +1,14 @@
 - name: Deploy Lightweight VM on Proxmox
-  hosts: pve.robinson-home.net
-  gather_facts: true
-  become: false
+  hosts: localhost
+  gather_facts: false
+  become: true
 
   tasks:
     - name: Create Proxmox VM
       community.general.proxmox_kvm:
+        api_host: "https://pve.robinson-home.net:8006/api2/json"
+        api_user: "root@pam"
+        api_password: "Granby1400!!"
         node: "pve1"
         name: "lightweight-vm"
         ostemplate: "local:vztmpl/debian-10.0-standard_10.0-1_amd64.tar.gz"
@@ -15,4 +18,3 @@
         netif: 'virtio-net,bridge=vmbr0'
         password: "Granby1400!!"
         state: started
-      delegate_to: localhost
