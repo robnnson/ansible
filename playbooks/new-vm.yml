@@ -1,7 +1,7 @@
 - name: Deploy Lightweight VM on Proxmox
   hosts: pve.robinson-home.net
   gather_facts: true
-  become: true
+  become: false
 
   tasks:
     - name: Create Proxmox VM
