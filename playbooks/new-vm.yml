@@ -1,6 +1,8 @@
 - name: Deploy Lightweight VM on Proxmox
   hosts: localhost
   gather_facts: false
+  vars:
+    ansible_python_interpreter: /root/.venv/bin/python3
   become: false
 
   tasks:
