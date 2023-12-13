@@ -14,5 +14,4 @@
         memory: 512
         onboot: true
         cores: 1
-        virtio: true  # Use virtio for network interface
         state: started
