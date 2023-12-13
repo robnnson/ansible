@@ -1,16 +1,13 @@
 - name: Deploy Lightweight VM on Proxmox
   hosts: pve.robinson-home.net
   gather_facts: false
-  command: "/.venv/bin/activate"
-  args:
-    executable: /bin/bash
-  vars:
-    ansible_python_interpreter: "/.venv/bin/python3"
-  become: false
-- name: Activate Virtual Environment
-
-
+  become: true
   tasks:
+    - name: Activate Virtual Environment
+      command: "/path/to/your/virtualenv/bin/activate"
+      args:
+        executable: /bin/bash
+
     - name: Create Proxmox VM
       community.general.proxmox_kvm:
         api_host: "https://pve.robinson-home.net:8006/api2/json"
