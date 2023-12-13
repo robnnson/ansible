@@ -9,7 +9,7 @@
       proxmox_kvm_vm:
         node: "pve1"
         name: "lightweight-vm"
-        ostemplate: "local:vztmpl/debian-10.0-standard_10.0-1_amd64.tar.gz"
+        ostemplate: "local:kubuntu-23.10-desktop-amd64.iso 
         memory: 512
         onboot: true
         cores: 1
