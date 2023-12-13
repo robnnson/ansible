@@ -14,6 +14,6 @@
         onboot: true
         cores: 1
         netif: vmbr0
-        password: "Granby1400!!"
+        password: Granby1400!!
         state: started
       delegate_to: localhost
