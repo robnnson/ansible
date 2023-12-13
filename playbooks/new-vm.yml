@@ -1,7 +1,7 @@
 - name: Deploy Lightweight VM on Proxmox
   hosts: localhost
   gather_facts: false
-  become: true
+  become: false
 
   tasks:
     - name: Create Proxmox VM
