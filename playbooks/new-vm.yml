@@ -5,8 +5,8 @@
   tasks:
     - name: Activate Virtual Environment
       command: "/bin/bash -c 'source /.venv/bin/activate'"
-      environment:
-        PATH: "{{ ansible_env.PATH }}:{{ virtualenv_bin_dir }}"
+#      environment:
+#        PATH: "{{ ansible_env.PATH }}:{{ virtualenv_bin_dir }}"
       vars:
         virtualenv_bin_dir: "/.venv/bin"
 
