@@ -4,9 +4,11 @@
   become: true
   tasks:
     - name: Activate Virtual Environment
-      command: "/.venv/bin/activate"
-      args:
-        executable: /bin/bash
+      command: "/bin/bash -c 'source /.venv/bin/activate'"
+      environment:
+        PATH: "{{ ansible_env.PATH }}:{{ virtualenv_bin_dir }}"
+      vars:
+        virtualenv_bin_dir: "/.venv/bin"
 
     - name: Create Proxmox VM
       community.general.proxmox_kvm:
