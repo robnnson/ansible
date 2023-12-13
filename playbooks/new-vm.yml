@@ -13,6 +13,7 @@
         memory: 512
         onboot: true
         cores: 1
-        password: "Granby1400!!"
+        netif: 'vmbr0'
+        password: 'Granby1400!!'
         state: started
       delegate_to: localhost
