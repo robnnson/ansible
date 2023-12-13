@@ -1,16 +1,16 @@
 - name: Deploy Lightweight VM on Proxmox
-  hosts: localhost
+  hosts: pve.robinson-home.net
   gather_facts: false
   vars:
-    ansible_python_interpreter: .venv/bin/python3
+    ansible_python_interpreter: /.venv/bin/python3
   become: false
 
   tasks:
     - name: Create Proxmox VM
       community.general.proxmox_kvm:
         api_host: "https://pve.robinson-home.net:8006/api2/json"
-        api_user: "your_proxmox_username@pam"
-        api_password: "your_proxmox_password"
+        api_user: "root@pam"
+        api_password: "Granby1400!!"
         node: "pve1"
         name: "lightweight-vm"
         memory: 512
